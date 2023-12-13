@@ -1,0 +1,75 @@
+@use 'base';
+
+.None {
+    display: none;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Montserrat;
+    color: rgb(50, 50, 50);
+
+    .AppBackground {
+        position: fixed;
+        z-index: -1;
+        width: 100vw;
+        height: 57vw;
+        min-width: 178vh;
+        min-height: 100vh;
+    }
+
+    .Subtitle {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 25px;
+    }
+
+    .AppLogo {
+        width: 200px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .Tabs {
+        width: 392px;
+        padding: 4px;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.01);
+        
+        .Tab {
+            background-color: white;
+            color: rgb(50, 50, 50);
+            padding: 10px 20px;
+            width: calc(50% - 40px);
+            height: calc(100% - 20px);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .Active {
+            background-color: base.$base-color;
+            color: white;
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .Tabs {
+        width: calc(90% - 8px) !important;
+    }
+}
